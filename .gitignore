@@ -1,0 +1,9 @@
+# Ignore everything (useful to ignore the whole Contao installation)
+/*
+
+!.gitignore
+!README.md
+
+!files/
+files/*
+!files/cto-bootstrap/
