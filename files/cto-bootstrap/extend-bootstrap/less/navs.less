@@ -1,0 +1,97 @@
+.mainnav {
+	.navbar;  
+	.container;
+	
+	ul {
+		.nav;
+		margin-bottom: 0;
+		
+		float: right;
+	
+		> li {
+			float: left;
+		}
+		
+		a, span {
+			padding: 20px 15px 20px;
+			color: #777777;
+			text-decoration: none;
+			display: block;
+			font-weight: bold;
+			margin: 0 5px;
+		}
+		
+		a:hover {
+			color: @black;
+		}
+		
+		span.active, a.trail {
+			background: @grayLighter;
+			color: @gray;
+			box-shadow: inset 0 0 4px rgba(0,0,0,.1); 
+		}
+	}
+}
+
+.subnav {
+	ul {
+		.nav;
+		
+		a, span {
+			display: block;
+			margin: 0 0 -1px;
+			padding: 8px 14px;
+			border: 1px solid #e5e5e5;
+		}
+		
+		a:hover {
+			text-decoration: none;
+			background-color: @grayLighter;
+		}
+		
+		li .first {
+			.border-top-radius(5px);
+		}
+		
+		li .last {
+			.border-bottom-radius(5px);
+		}
+		
+		span.active {
+			color: @white;
+			text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+			background-color: @linkColor;
+		}
+	}
+}
+
+.footernav {
+	.navbar;
+	
+	ul {
+		.nav;
+		float: right;
+		
+		> li {
+			float: left;
+		}
+	}
+		
+	a, span {
+		padding: 0 10px;
+		text-decoration: none;
+		display: block;
+		margin: 0 5px;
+	}
+	
+	a:hover {
+		color: @black;
+	}
+	
+	span.active, a.trail {
+		
+		color: @black;
+		
+	}
+	
+}
