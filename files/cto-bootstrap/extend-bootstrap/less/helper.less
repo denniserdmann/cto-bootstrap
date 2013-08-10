@@ -1,0 +1,169 @@
+//
+// Helper CTO Bootstrap
+// Ergänzungen und Überschreibungen, um Contao mit Bootstrap zu betreiben
+// --------------------------------------------------
+
+#header {
+	.inside {
+		.container;
+	}
+}
+
+#container, #footer {
+	.container;
+}
+
+.ce_text ul {
+	list-style-type: disc;
+}
+
+.invisible {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	left: -1000px;
+	top: -1000px;
+	position: absolute;
+	overflow: hidden;
+	display: inline;
+}
+
+.pagination {
+	text-align: center;
+	margin-top: @baseLineHeight;
+	
+	p {
+		position: absolute;
+		padding: 5px 0;
+	}
+}
+
+.alert {
+	padding-right: 14px;
+}
+
+/* FORMULARE */
+
+label[class*="span"] {
+	float: none;
+	margin-left: 0;
+}
+
+.radio_container {
+	margin-top: @baseLineHeight/4;
+	
+	legend {
+		border-bottom: 0;
+		margin: 0 0 5px;
+		font-size: @baseFontSize;
+		line-height: @baseLineHeight;
+	}
+	
+	label {
+		display: inline;
+		margin: @baseLineHeight/4 @baseLineHeight 0 0;	
+	}
+	
+	input {
+		margin-top: 1px; /* Safari & Chrome */
+		display: inline;
+		line-height: @baseLineHeight;
+		vertical-align: text-top;
+	}
+}
+
+.checkbox_container {
+	margin-bottom: @baseLineHeight;
+	
+	label {
+		display: inline;
+		margin: @baseLineHeight/4 @baseLineHeight 0 0;	
+	}
+	
+	input {
+		margin-top: 1px; /* Safari & Chrome */
+		display: inline;
+		line-height: @baseLineHeight;
+		vertical-align: text-top;
+	}
+}
+
+/* KOMMENTARE */
+
+.ce_comments {
+
+	.widget {
+		clear: both;
+	}
+	
+	.text,
+	.captcha {
+		.makeColumn(4);
+		
+		margin-left: 0;
+		float: left;
+		margin-right: @baseLineHeight/2;
+	}
+	
+	.textarea {
+		.makeColumn(7);
+		
+		margin-left: 0;
+		margin-top: @baseLineHeight;
+		height: @baseLineHeight*8;
+	}
+	
+	.submit {
+		.btn;
+		.btn-warning;
+	}
+}
+
+/* BILDER */
+
+.ce_image,
+.ce_text {
+	
+	&.circle img {
+		.img-circle;
+	}
+	
+	&.rounded img {
+		.img-rounded;
+	}
+	
+	&.polaroid img {
+		.img-polaroid;
+	}
+}
+
+/* GALERIE */
+
+.ce_gallery {
+	.clearfix;
+
+	ul {
+		margin: 0;
+	}
+	li {
+		float: left;
+	}
+	li.col_first {
+		clear: both;
+	}
+	figure {
+		padding-bottom: 10px;
+	}
+	
+	&.polaroid img {
+		.img-polaroid;
+	}
+	
+	&.circle img {
+		.img-circle;
+	}
+	
+	&.rounded img {
+		.img-rounded;
+	}
+}

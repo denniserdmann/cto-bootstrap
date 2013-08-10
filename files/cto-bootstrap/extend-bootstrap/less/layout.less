@@ -1,0 +1,310 @@
+// LAYOUT
+
+/* HOME: TEASER
+------------------------- */
+
+#header {
+	box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+	background: @white;
+	.navbar-fixed-top;
+}
+
+.logo {
+	text-transform: uppercase;
+	float: left;
+	
+	a {
+		color: @black;
+		font-weight: bold;
+		padding: 20px 15px 20px;
+		display: block;
+		transform: rotate(-3deg);
+	}
+	
+	a:hover {
+		-webkit-animation: wiggle .2s;
+		text-decoration: none;
+		color: @red;
+		
+	}
+	
+	@-webkit-keyframes wiggle { // Hover-Animation fuer Logo
+		25% { -webkit-transform: rotate(-3deg); }
+		50% { -webkit-transform: rotate(0) };
+		75% { -webkit-transform: rotate(3deg); }
+	}
+}
+
+#teaser {
+	position: relative;
+	padding: 110px 0 70px;
+	background: @teaserBackground;
+	color: #fff;
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);  
+	
+	p {
+		font-size: 24px;
+	}   
+
+	.hometeaser {        
+		
+		h1 {
+		  font-size: 80px;
+		  font-weight: bold;
+		  letter-spacing: -1px;
+		  line-height: 1;
+		}
+		
+		p {
+		  font-size: 40px;
+		  font-weight: 300;
+		  line-height: 1.25;
+		  margin-bottom: 30px;
+		}
+
+		
+		.ce_hyperlink a {
+			padding: 19px 24px;
+			font-size: 24px;
+		}
+	}
+}
+
+#container {
+	margin-top: 30px;
+	margin-bottom: 60px;
+}
+
+#footer {
+	border-top: 1px solid @grayLighter;
+	padding-top: 20px;
+	
+	.note {
+		font-weight: bold;
+		float: left;
+	}
+}
+
+/* Häufige Grid Layouts
+------------------------- */
+
+// Zweispaltig links
+
+body.columns-2-10 {
+
+	#left {
+		.makeColumn(2);
+		margin-left: 0;
+	}	
+	#main {
+		.makeColumn(10);
+		float: right;
+	}
+}
+
+body.columns-3-9 {
+
+	#left {
+		.makeColumn(3);
+		margin-left: 0;
+	}
+	#main {
+		.makeColumn(9);
+		float: right;
+	}	
+}
+
+body.columns-4-8 {
+
+	#left {
+		.makeColumn(4);
+		margin-left: 0;
+	}
+	#main {
+		.makeColumn(8);
+		float: right;
+	}	
+}
+
+// Zweispaltig rechts
+
+body.columns-8-4 {
+
+	#main {
+		.makeColumn(8);
+		margin-left: 0;
+	}
+	#right {
+		.makeColumn(4);
+	}
+}
+
+body.columns-9-3 {
+
+	#main {
+		.makeColumn(9);
+		margin-left: 0;
+	}
+	#right {
+		.makeColumn(3);
+	}
+}
+
+body.columns-10-2 {
+
+	#main {
+		.makeColumn(10);
+		margin-left: 0;
+	}
+	#right {
+		.makeColumn(2);
+	}
+}
+
+// Dreispaltig
+
+body.columns-3-7-2 {
+
+	#container {
+		position: relative;
+	}
+	
+	#left {
+		.makeColumn(3);
+		.makeHoly(7);
+	}
+	#main {
+		.makeColumn(7);
+		float: left;
+		position: relative;
+		left: 220px;
+	}
+	#right {
+		.makeColumn(2);
+		float: right;
+	}
+}
+
+body.columns-4-6-2 {
+	
+	#left {
+		.makeColumn(4);
+		margin-left: 0;
+	}
+	#main {
+		.makeColumn(6);
+		float: left;
+	}
+	#right {
+		.makeColumn(2);
+		float: right;
+	}
+}
+
+
+/* NEWS */
+.layout_latest {
+	border-bottom: 1px solid @grayLighter;
+	padding-bottom: @baseLineHeight;
+	
+	.info {
+		color: @grayLight;
+		margin-bottom: 0;
+	}
+	.more a {
+		margin-top: @baseLineHeight;
+	}
+	
+	&.last {
+		border-bottom: 0;
+	}
+}
+
+.layout_full {
+
+	.info {
+		color: @grayLight;
+	}
+	.info + .ce_text {
+		font-size: 20px;
+		line-height: 1.4;
+		color: @gray;
+		margin-bottom: 20px;
+	}
+	
+	& + .back {
+		margin-top: @baseLineHeight;
+		padding-bottom: @baseLineHeight;
+		border-bottom: 1px solid @grayLighter;
+	}
+}
+.mod_newsreader .ce_comments h2 {
+	font-size: @baseFontSize * 1.25;
+}
+
+.mod_newsmenu {
+	.subnav;
+	
+	.year > a {
+		font-weight: bold;
+	}
+	
+	.year:first-child > a {
+		.border-top-radius(5px);
+	}
+	
+	.year:last-child .level_2 {
+		margin-bottom: 0;
+		
+		> li.last a {
+			.border-bottom-radius(5px);
+		}
+	}
+	
+	.level_2 {
+		margin-bottom: 0;
+		
+		a {
+			padding-left: 20px;
+		}
+	}
+}
+
+/* FAQ */
+
+.mod_faqlist {
+	h2 {
+		font-size: @baseFontSize*1.5;
+		line-height: 1.25;
+	}
+	ul {
+		list-style-type: disc;
+		margin-bottom: @baseLineHeight;
+	}
+}
+
+.mod_faqreader {
+	.info {
+		color: @grayLight;
+		font-style: italic;
+	}
+	
+	li {
+		margin-bottom: @baseLineHeight;
+	}
+}
+
+.faq-form {
+	input, textarea {
+		width: 258px;
+		max-width: 100%;
+	}
+}
+
+/* KONTAKT FORM */
+
+.kontakt-form {
+	margin-left: 40px;
+	margin-top: 40px;
+}
