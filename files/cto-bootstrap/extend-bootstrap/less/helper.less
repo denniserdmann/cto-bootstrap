@@ -174,3 +174,38 @@ label[class*="span"] {
 	width: 100%;
 	margin-bottom: 0;
 }
+
+/* ACCORDION */
+
+.ce_accordion {
+	.accordion-group;
+
+	.toggler {	
+		.accordion-heading;
+		.accordion-heading > .accordion-toggle;
+		.accordion-toggle;
+		
+		color: @linkColor;
+	}
+	
+	.toggler:focus {
+		outline: 0;
+	}
+	
+	.toggler:before {
+		.icon(@expand);
+	}
+	.toggler[aria-selected="true"]:before,
+	.toggler[aria-expanded="true"]:before {
+		.icon(@collapse);
+	}
+	
+	.accordion {
+		margin-bottom: 0;
+	}
+	
+	.accordion > div {
+		.accordion-inner;
+		.clearfix;
+	}
+}
