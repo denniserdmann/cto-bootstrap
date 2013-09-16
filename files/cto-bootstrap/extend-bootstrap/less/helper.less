@@ -5,12 +5,12 @@
 
 #header {
 	.inside {
-		.container;
+		.containerFluid;
 	}
 }
 
 #container, #footer {
-	.container;
+	.containerFluid;
 }
 
 .ce_text ul {
@@ -98,7 +98,7 @@ label[class*="span"] {
 	
 	.text,
 	.captcha {
-		.makeColumn(4);
+		.makeFluidColumn(6);
 		
 		margin-left: 0;
 		float: left;
@@ -106,7 +106,7 @@ label[class*="span"] {
 	}
 	
 	.textarea {
-		.makeColumn(7);
+		.makeFluidColumn(12);
 		
 		margin-left: 0;
 		margin-top: @baseLineHeight;

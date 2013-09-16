@@ -1,0 +1,38 @@
+//
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+	#header {
+		font-size: 14px; // decrease header font size to show logo and navigation in one row
+	}
+	
+	#mainnav ul a,
+	#mainnav ul span {
+		padding: 20px 8px;
+	}
+	
+	#container,
+	#footer {
+		padding: 0 20px;
+	}
+	
+	#footer .note {
+		display: none;
+	}
+	
+	body.columns-3-9 {
+
+		#left {
+			.makeFluidColumn(3);
+			margin-left: 0;
+		}
+		#main {
+			.makeFluidColumn(9);
+			float: right;
+		}	
+	}
+
+}
