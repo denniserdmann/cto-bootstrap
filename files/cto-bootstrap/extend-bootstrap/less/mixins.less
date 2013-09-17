@@ -3,6 +3,15 @@
 	margin: 0 auto;
 }
 
+.containerFluid(@columns: 12) {
+	.clearfix;
+	
+	margin-left: auto;
+	margin-right: auto;
+	max-width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+	
+}
+
 .two-column-right(@main,@right) {
 	
 	#main {
@@ -17,17 +26,25 @@
 }
 
 .makeHoly(@columns: 1, @offset: 0) {
-	margin-left: ((@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns))) * -1;
+	margin-left: ((@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns))) * -1;
 }
 
-/*
-.makeRow() {
-  margin-left: @gridGutterWidth * -1;
-  .clearfix();
+.makeFluidColumn(@span:1,@offset:0){
+    
+    #grid > .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth); 
+    
+	// 768px-979px
+	// @fluidGridColumnWidth768
+	// @fluidGridGutterWidth768 
+	
+    #grid > .fluid .span(@span);
+    #grid > .fluid .offset(@offset);
+    
+    float: left;
+    
+    &:first-child {
+        .offsetFirstChild(@offset);
+        
+        // margin-left: 0;
+    }
 }
-.makeColumn(@columns: 1, @offset: 0) {
-  float: left;
-  margin-left: (@gridColumnWidth * @offset) + (@gridGutterWidth * (@offset - 1)) + (@gridGutterWidth * 2);
-  width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
-}
-*/

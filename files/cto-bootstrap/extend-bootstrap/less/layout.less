@@ -16,7 +16,7 @@
 	a {
 		color: @black;
 		font-weight: bold;
-		padding: 20px 15px 20px;
+		padding: 20px;
 		display: block;
 		transform: rotate(-3deg);
 	}
@@ -94,11 +94,11 @@
 body.columns-2-10 {
 
 	#left {
-		.makeColumn(2);
+		.makeFluidColumn(2);
 		margin-left: 0;
 	}	
 	#main {
-		.makeColumn(10);
+		.makeFluidColumn(10);
 		float: right;
 	}
 }
@@ -106,11 +106,11 @@ body.columns-2-10 {
 body.columns-3-9 {
 
 	#left {
-		.makeColumn(3);
+		.makeFluidColumn(3);
 		margin-left: 0;
 	}
 	#main {
-		.makeColumn(9);
+		.makeFluidColumn(9);
 		float: right;
 	}	
 }
@@ -118,11 +118,11 @@ body.columns-3-9 {
 body.columns-4-8 {
 
 	#left {
-		.makeColumn(4);
+		.makeFluidColumn(4);
 		margin-left: 0;
 	}
 	#main {
-		.makeColumn(8);
+		.makeFluidColumn(8);
 		float: right;
 	}	
 }
@@ -132,33 +132,33 @@ body.columns-4-8 {
 body.columns-8-4 {
 
 	#main {
-		.makeColumn(8);
+		.makeFluidColumn(8);
 		margin-left: 0;
 	}
 	#right {
-		.makeColumn(4);
+		.makeFluidColumn(4);
 	}
 }
 
 body.columns-9-3 {
 
 	#main {
-		.makeColumn(9);
+		.makeFluidColumn(9);
 		margin-left: 0;
 	}
 	#right {
-		.makeColumn(3);
+		.makeFluidColumn(3);
 	}
 }
 
 body.columns-10-2 {
 
 	#main {
-		.makeColumn(10);
+		.makeFluidColumn(10);
 		margin-left: 0;
 	}
 	#right {
-		.makeColumn(2);
+		.makeFluidColumn(2);
 	}
 }
 
@@ -171,17 +171,17 @@ body.columns-3-7-2 {
 	}
 	
 	#left {
-		.makeColumn(3);
+		.makeFluidColumn(3);
 		.makeHoly(7);
 	}
 	#main {
-		.makeColumn(7);
+		.makeFluidColumn(7);
 		float: left;
 		position: relative;
 		left: 220px;
 	}
 	#right {
-		.makeColumn(2);
+		.makeFluidColumn(2);
 		float: right;
 	}
 }

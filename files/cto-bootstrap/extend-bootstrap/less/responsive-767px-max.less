@@ -1,0 +1,137 @@
+//
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+
+
+@media (max-width: 767px) {
+
+	#header,
+	#footer {
+		font-size: 14px; // decrease header font size to navigation in one row
+	}
+	
+	h1,
+	h2 {
+		font-size: 24px;
+		line-height: 1.2;
+	}
+	
+	h3,
+	h4 {
+		font-size: 18px;
+		line-height: 1.2;
+	}
+	
+	#toggleBtn {
+		display: block;
+	}
+	
+	#mainnav {
+		margin-bottom: 0;
+		clear: both;
+		
+		clip: rect(0 0 0 0);
+		max-height: 0;
+		position: absolute;
+		display: block;
+		overflow: hidden;
+		zoom: 1;
+		
+		ul {
+			width: 100%;
+			float: none;
+			padding-bottom: @baseLineHeight;
+		
+			> li {
+				float: none;
+			}
+			
+			a, span {
+				padding: 10px 0 10px 20px;
+				margin: 0;
+			}
+		}
+	}
+	
+	#container,
+	#footer {
+		padding: 0 20px;
+	}
+	
+	#footer .note {
+		display: none;
+	}
+	
+	.row-fluid [class*="span"] {
+		width: 100%;
+		float: none;
+		margin-left: 0;
+		margin-bottom: @baseLineHeight;
+	}
+	
+	body[class*="columns-"] {
+
+		#left, #right, #main {
+			.makeFluidColumn(12);
+			margin-left: 0;
+			left: 0;
+		}
+	}
+	
+	// form fields 100%
+	.faq-form,
+	.kontakt-form {
+		margin-left: 0;
+		
+		label[class*="span"],
+		input.text,
+		textarea {
+			width: 100%;
+			box-sizing: border-box;
+			height: auto;
+		}
+	}
+	
+	// comment field styling
+	.ce_comments {
+		input.text {
+			.makeFluidColumn(6);
+			
+			box-sizing: border-box;
+			height: auto;
+			margin-right: 0;
+		}
+		
+		label {
+			.makeFluidColumn(6);
+		}
+		
+		textarea {
+			width: 100%;
+			box-sizing: border-box;
+			height: auto;
+		}	
+	}
+	
+	// teaser
+	#teaser {
+		padding: 80px 0 30px;
+	
+		// home teaser
+		.hometeaser {
+			
+			h1 {
+				font-size: 40px;
+			}
+			
+			p {
+				font-size: @baseFontSize * 1.5;
+			}
+			
+			.ce_hyperlink a {
+				padding: @paddingLarge;
+				font-size: @baseFontSize;
+			}
+		}
+	}
+}

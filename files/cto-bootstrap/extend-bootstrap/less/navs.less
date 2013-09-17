@@ -1,13 +1,11 @@
-.mainnav {
+#mainnav {
 	.navbar;  
-	.container;
 	
 	ul {
 		.nav;
-		margin-bottom: 0;
-		
-		float: right;
-	
+		.navbar > .nav;
+		.nav > .pull-right;
+			
 		> li {
 			float: left;
 		}
@@ -22,7 +20,7 @@
 		}
 		
 		a:hover {
-			color: @black;
+			color: @red;
 		}
 		
 		span.active, a.trail {
@@ -31,6 +29,15 @@
 			box-shadow: inset 0 0 4px rgba(0,0,0,.1); 
 		}
 	}
+}
+
+#toggleBtn {
+	.btn;
+	
+	display: none;
+	float: right;
+	margin: 15px 20px 0 0;
+	color: @grayLight;
 }
 
 .subnav {
