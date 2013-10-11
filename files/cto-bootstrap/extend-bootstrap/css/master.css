@@ -10940,6 +10940,10 @@ input.submit .btn-mini {
     box-sizing: border-box;
     height: auto;
   }
+  .faq-form .radio_container span,
+  .kontakt-form .radio_container span {
+    display: block;
+  }
   .ce_comments input.text {
     width: 48.93617021276595%;
     *width: 48.88297872340425%;
