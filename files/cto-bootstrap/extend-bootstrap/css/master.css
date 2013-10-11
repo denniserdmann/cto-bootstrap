@@ -5240,6 +5240,9 @@ label[class*="span"] {
   vertical-align: text-top;
 }
 /* KOMMENTARE */
+.ce_comments .comment_default {
+  margin-bottom: 16px;
+}
 .ce_comments .widget {
   clear: both;
 }
