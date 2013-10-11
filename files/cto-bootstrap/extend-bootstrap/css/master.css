@@ -9157,21 +9157,21 @@ body.columns-4-6-2 #right {
   *position: relative;
   *z-index: 2;
 }
-.footernav ul {
+.footernav ul.level_1 {
   margin-left: 0;
   margin-bottom: 24px;
   list-style: none;
   float: right;
 }
-.footernav ul [class^="icon-"].icon-large,
-.footernav ul [class*=" icon-"].icon-large {
+.footernav ul.level_1 [class^="icon-"].icon-large,
+.footernav ul.level_1 [class*=" icon-"].icon-large {
   line-height: .9em;
 }
-.footernav ul [class^="icon-"].icon-spin,
-.footernav ul [class*=" icon-"].icon-spin {
+.footernav ul.level_1 [class^="icon-"].icon-spin,
+.footernav ul.level_1 [class*=" icon-"].icon-spin {
   display: inline-block;
 }
-.footernav ul > li {
+.footernav ul.level_1 > li {
   float: left;
 }
 .footernav a,
