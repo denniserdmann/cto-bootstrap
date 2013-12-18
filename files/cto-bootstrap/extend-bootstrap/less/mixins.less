@@ -30,12 +30,6 @@
 }
 
 .makeFluidColumn(@span:1,@offset:0){
-    
-    #grid > .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth); 
-    
-	// 768px-979px
-	// @fluidGridColumnWidth768
-	// @fluidGridGutterWidth768 
 	
     #grid > .fluid .span(@span);
     #grid > .fluid .offset(@offset);
@@ -43,8 +37,6 @@
     float: left;
     
     &:first-child {
-        .offsetFirstChild(@offset);
-        
-        // margin-left: 0;
+        #grid > .fluid .offsetFirstChild(@offset);
     }
 }
