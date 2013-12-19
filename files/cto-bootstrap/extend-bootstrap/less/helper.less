@@ -195,12 +195,12 @@ label[class*="span"] {
 		outline: 0;
 	}
 	
-	.toggler:before {
-		.icon(@expand);
+	.toggler {
+		.fa-icon(@fa-var-caret-square-o-right);
 	}
-	.toggler[aria-selected="true"]:before,
-	.toggler[aria-expanded="true"]:before {
-		.icon(@collapse);
+	.toggler[aria-selected="true"],
+	.toggler[aria-expanded="true"] {
+		.fa-icon(@fa-var-caret-square-o-down);
 	}
 	
 	.accordion {

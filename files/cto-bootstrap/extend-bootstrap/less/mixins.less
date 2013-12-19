@@ -30,12 +30,6 @@
 }
 
 .makeFluidColumn(@span:1,@offset:0){
-    
-    #grid > .fluid (@fluidGridColumnWidth, @fluidGridGutterWidth); 
-    
-	// 768px-979px
-	// @fluidGridColumnWidth768
-	// @fluidGridGutterWidth768 
 	
     #grid > .fluid .span(@span);
     #grid > .fluid .offset(@offset);
@@ -43,8 +37,22 @@
     float: left;
     
     &:first-child {
-        .offsetFirstChild(@offset);
-        
-        // margin-left: 0;
+        #grid > .fluid .offsetFirstChild(@offset);
     }
+}
+//
+// Mixin für font awesome 4.X
+//
+.fa-icon(@icon) {
+	&:before {
+		display: inline-block;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		padding-right: 0.25em;
+		content: @icon;
+	}
 }
