@@ -5613,6 +5613,7 @@ body.columns-3-7-2 #right {
   *margin-left: 2.0212765957446805%;
   float: left;
   float: right;
+  margin-right: 0;
 }
 body.columns-3-7-2 #right:first-child {
   margin-left: 0%;
@@ -5634,6 +5635,7 @@ body.columns-4-6-2 #right {
   margin-left: 20px;
   width: 140px;
   float: right;
+  margin-right: 0;
 }
 /* NEWS */
 .layout_latest {
